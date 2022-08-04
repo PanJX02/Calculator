@@ -162,7 +162,9 @@ public class MyListener implements View.OnClickListener {
             }
             default: {
                 //上一次的运算结果已经出来了
-                if (main.getResult().length()>0 && main.getOperator().equals("")) {
+                if ((main.getResult().length()>0 && main.getOperator().equals("")) || main.getShowText().equals("error")) {
+                    main.getBtn_cancel().setEnabled(true);
+                    main.getBtn_cancel().setTextColor(Color.BLACK);
                     clear();
                 }
                 //无运算符，则继续拼接第一个操作数
@@ -197,7 +199,7 @@ public class MyListener implements View.OnClickListener {
         switch (main.getOperator()) {
             case "+":
                 return num1.add(num2);
-            case "−":
+            case "-":
                 return num1.subtract(num2);
             case "×":
                 return num1.multiply(num2);
