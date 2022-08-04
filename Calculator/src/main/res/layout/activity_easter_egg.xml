@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="遇见你是我此生最大的幸运"
+        android:text="@string/easter_egg"
         android:gravity="center"
         android:textSize="20sp"/>
 
